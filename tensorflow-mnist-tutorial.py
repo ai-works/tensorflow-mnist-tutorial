@@ -1,41 +1,11 @@
 import tensorflow as tf 
-
-'''
-inmput > weighted > hidden layer 1 > activation function > hidden l 2 
-> activation function > weights > output layer 
-
-compare output to intended output > cost or loss function (cross entropy)
-optimization function (optimizer) > minimize the cost (adam, SGD, AdaGtad)
-
-backropogation 
-
-feed forward + backprop = epoch
- 
-'''
-
 from tensorflow.examples.tutorials.mnist import input_data
-
 mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 
-# 10 Klassen, 0-9
-'''
-0 = 0
-1 = 1
-2 = 2
-...
- 
-one hote encoding macht 
-
-0 = [1,0,0,0,0,0,0,0]
-1 = [0,1,0,0,0,0,0,0]
-2 = [0,0,1,0,0,0,0,0]
-
-'''
-# define number of nodes within hidden layers
+# 0. define number of nodes within hidden layers, classes and batch size 
 n_nodes_hl1 = 500
 n_nodes_hl2 = 500
 n_nodes_hl3 = 500
-
 n_classes = 10
 batch_size = 100 # number of data where we compute the average loss and update the weights and biases afterwards 
 
